@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <a th:href="@{/}">Select Service</a>
+    <th:block th:each="user : ${users}">
+        <p><a th:href="@{/user/{profile} (profile=${user.id})}" th:text="${user.username}">User</a></p>
+    </th:block>
+
+
+</body>
+</html>
